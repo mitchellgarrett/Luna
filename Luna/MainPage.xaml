@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Luna.MainPage">
+
+    <StackLayout Margin="10,35,10,10">
+        <Label Text="Luna"
+               HorizontalOptions="Center"
+               FontAttributes="Bold" />
+
+        <Entry x:Name="filename"
+               Text="file.lua"
+               Keyboard="Plain"/>
+
+        <Frame HasShadow="False" BorderColor="LightGray" CornerRadius="5" Padding="0,0,0,0">
+            <Editor x:Name="editor"
+                    Keyboard="Plain"
+                    Placeholder="Enter your code"
+                    HeightRequest="400"
+                    HorizontalOptions="FillAndExpand"/>
+        </Frame>
+
+        <Frame HasShadow="False" BorderColor="LightGray" CornerRadius="5" Padding="0,0,0,0">
+            <StackLayout>
+                <ScrollView Orientation="Vertical">
+                    <Label x:Name="console"
+                           HorizontalTextAlignment="Start"
+                           HeightRequest="100"
+                           HorizontalOptions="FillAndExpand"/>
+                </ScrollView>
+                <Entry x:Name="input"
+                       Keyboard="Plain"
+                       IsReadOnly="False"
+                       HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+        </Frame>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button Text="Save"
+                    Clicked="OnSave" />
+            <Button Grid.Column="1"
+                Text="Load"
+                Clicked="OnLoad" />
+            <Button Grid.Column="2"
+                Text="Run"
+                Clicked="OnRun"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>
