@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Luna.MainPage">
+    <ContentPage.Content>
+
+        <StackLayout Margin="10,35,10,10">
+
+            <Label Text="Luna"
+               HorizontalOptions="Center"
+               FontAttributes="Bold" />
+
+            <Button Text="New"/>
+            <Button Text="Edit"/>
+            <Button Text="Library"/>
+            <Button Text="Settings"/>
+            <Button Text="About"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
