@@ -6,8 +6,7 @@ namespace Luna {
     public partial class App : Application {
         public App() {
             InitializeComponent();
-            //MainPage = new MainPage();
-            MainPage = new CodeEditorPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart() {

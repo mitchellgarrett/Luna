@@ -8,27 +8,33 @@ using Luna.Library;
 
 namespace Luna {
 
-    public partial class CodeEditorPage : ContentPage {
+    public partial class CodeEditorPage : ContentPage { 
 
-        const char DOUBLE_QUOTE = '\"';
-        const char SINGLE_QUOTE = '\'';
+        readonly string FILE_PATH;
+        readonly string FILE_NAME;
 
         bool programRunning;
         bool inputCompleted;
-
-        public CodeEditorPage() {
+        
+        public CodeEditorPage(string file) {
             InitializeComponent();
+            FILE_PATH = file;
+            FILE_NAME = Path.GetFileName(file);
+
+            page.Title = FILE_NAME;
+            filename.Text = FILE_NAME;
             editor.TextChanged += OnEditorTextChanged;
             LoadLibraries();
+            OnLoad(null, null);
         }
 
         void OnSave(object sender, EventArgs e) {
-            File.WriteAllText(GetFileName(filename.Text), editor.Text);
+            File.WriteAllText(Config.GetFilePath(FILE_PATH), editor.Text);
         }
 
         void OnLoad(object sender, EventArgs e) {
-            if (File.Exists(GetFileName(filename.Text))) {
-                editor.Text = File.ReadAllText(GetFileName(filename.Text));
+            if (File.Exists(Config.GetFilePath(FILE_PATH))) {
+                editor.Text = File.ReadAllText(Config.GetFilePath(FILE_PATH));
             }
         }
 
@@ -98,11 +104,11 @@ namespace Luna {
                 }
             }*/
 
-            text = text.Replace((char)8220, DOUBLE_QUOTE);
-            text = text.Replace((char)8221, DOUBLE_QUOTE);
+            text = text.Replace((char)8220, Config.DOUBLE_QUOTE);
+            text = text.Replace((char)8221, Config.DOUBLE_QUOTE);
 
-            text = text.Replace((char)8216, SINGLE_QUOTE);
-            text = text.Replace((char)8217, SINGLE_QUOTE);
+            text = text.Replace((char)8216, Config.SINGLE_QUOTE);
+            text = text.Replace((char)8217, Config.SINGLE_QUOTE);
             bool valueChanged = true;
             /*char c = text.Last();
             bool valueChanged = false;
@@ -146,15 +152,11 @@ namespace Luna {
         }
 
         string ConsoleRead() {
-            while (!inputCompleted) ;
+            while (!inputCompleted);
             inputCompleted = false;
             string text = input.Text;
             InputClear();
             return text;
-        }
-
-        string GetFileName(string file) {
-            return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), file);
         }
 
         string FormatExceptionMessage(InterpreterException e) {

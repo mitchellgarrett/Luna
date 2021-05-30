@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Luna.App">
     <Application.Resources>
+        <!--<Style TargetType="ContentPage"><Setter Property="FontFamily" Value="Courier"/></Style>-->
         <Style TargetType="Label"><Setter Property="FontFamily" Value="Courier"/></Style>
         <Style TargetType="Editor"><Setter Property="FontFamily" Value="Courier"/></Style>
         <Style TargetType="Entry"><Setter Property="FontFamily" Value="Courier"/></Style>

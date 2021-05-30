@@ -2,17 +2,21 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="Luna.MainPage">
+    x:Class="Luna.MainPage"
+    NavigationPage.HasNavigationBar="False">
+
     <ContentPage.Content>
 
-        <StackLayout Margin="10,35,10,10">
+        <StackLayout Margin="10,35,10,10" VerticalOptions="Center">
 
             <Label Text="Luna"
                HorizontalOptions="Center"
                FontAttributes="Bold" />
-
-            <Button Text="New"/>
-            <Button Text="Edit"/>
+            <Image x:Name="image"/>
+            <Button x:Name="newFile"
+                Text="New"
+                    Clicked="OnNewFile"/>
+            <Button Text="Edit" Clicked="OnEditFile"/>
             <Button Text="Library"/>
             <Button Text="Settings"/>
             <Button Text="About"/>
