@@ -1,6 +1,6 @@
 # Luna
- Mobile Lua IDE.
+ Mobile Lua IDE for iOS.
 
-Uses MoonSharp
+Built using MoonSharp
 
 ![Luna IDE](luna.png?raw=true "Luna IDE")
