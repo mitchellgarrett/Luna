@@ -115,6 +115,35 @@
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="AppIcons.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Play.imageset\12553761961543238912-128.png" />
+    <ImageAsset Include="Assets.xcassets\Play.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Play.imageset\Play.png" />
+    <ImageAsset Include="Assets.xcassets\Menu1.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Menu2.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Menu2.imageset\menu2.png" />
+    <ImageAsset Include="Assets.xcassets\Menu1.imageset\menu1.png" />
+    <ImageAsset Include="Assets.xcassets\Doc1.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Doc1.imageset\doc1.png" />
+    <ImageAsset Include="Assets.xcassets\Doc2.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Doc3.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Doc4.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Doc4.imageset\doc4.png" />
+    <ImageAsset Include="Assets.xcassets\Doc3.imageset\doc3.png" />
+    <ImageAsset Include="Assets.xcassets\Doc2.imageset\doc2.png" />
+    <ImageAsset Include="Assets.xcassets\Edit.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Edit.imageset\edit.png" />
+    <ImageAsset Include="Assets.xcassets\Book.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Info.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Book.imageset\book.png" />
+    <ImageAsset Include="Assets.xcassets\Info.imageset\info.png" />
+    <ImageAsset Include="Assets.xcassets\Settings.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Settings.imageset\settings.png" />
+    <ImageAsset Include="Assets.xcassets\Terminal.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Terminal.imageset\terminal.png" />
+    <ImageAsset Include="Assets.xcassets\Keyboard1.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Keyboard2.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Keyboard1.imageset\keyboard1-1.png" />
+    <ImageAsset Include="Assets.xcassets\Keyboard2.imageset\keyboard2-1.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -137,5 +166,21 @@
       <Project>{696C4A4D-C071-4BD7-9246-D6824B6111C9}</Project>
       <Name>Luna</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\Play.imageset\" />
+    <Folder Include="Assets.xcassets\Menu1.imageset\" />
+    <Folder Include="Assets.xcassets\Menu2.imageset\" />
+    <Folder Include="Assets.xcassets\Doc1.imageset\" />
+    <Folder Include="Assets.xcassets\Doc2.imageset\" />
+    <Folder Include="Assets.xcassets\Doc3.imageset\" />
+    <Folder Include="Assets.xcassets\Doc4.imageset\" />
+    <Folder Include="Assets.xcassets\Edit.imageset\" />
+    <Folder Include="Assets.xcassets\Book.imageset\" />
+    <Folder Include="Assets.xcassets\Info.imageset\" />
+    <Folder Include="Assets.xcassets\Settings.imageset\" />
+    <Folder Include="Assets.xcassets\Terminal.imageset\" />
+    <Folder Include="Assets.xcassets\Keyboard1.imageset\" />
+    <Folder Include="Assets.xcassets\Keyboard2.imageset\" />
   </ItemGroup>
 </Project>

@@ -21,24 +21,30 @@ namespace Luna {
             FILE_PATH = file;
             FILE_NAME = Path.GetFileName(file);
 
-            page.Title = FILE_NAME;
+            pageTitle.Text = FILE_NAME;
             filename.Text = FILE_NAME;
             editor.TextChanged += OnEditorTextChanged;
             LoadLibraries();
-            OnLoad(null, null);
+            Load(null, null);
         }
 
-        void OnSave(object sender, EventArgs e) {
-            File.WriteAllText(Config.GetFilePath(FILE_PATH), editor.Text);
+        void Save(object sender, EventArgs e) {
+            File.WriteAllText(FILE_PATH, editor.Text);
         }
 
-        void OnLoad(object sender, EventArgs e) {
-            if (File.Exists(Config.GetFilePath(FILE_PATH))) {
-                editor.Text = File.ReadAllText(Config.GetFilePath(FILE_PATH));
+        void Load(object sender, EventArgs e) {
+            if (File.Exists(FILE_PATH)) {
+                editor.Text = File.ReadAllText(FILE_PATH);
             }
         }
 
-        void OnRun(object sender, EventArgs e) {
+        void Menu(object sender, EventArgs e) {
+            menu.Focus();
+        }
+
+        void Run(object sender, EventArgs e) {
+            Save(null, null);
+
             ConsoleClear();
             InputClear();
 

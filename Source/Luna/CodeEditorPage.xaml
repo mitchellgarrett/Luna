@@ -2,10 +2,27 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Luna.CodeEditorPage"
-             x:Name="page">
+             Title="File">
+
+    <NavigationPage.TitleView>
+        <FlexLayout JustifyContent="SpaceEvenly">
+            <Label x:Name="pageTitle" Text="File" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center" MaxLines="1" FontAttributes="Bold"/>
+            <Button ImageSource="Menu1" Clicked="Menu" HorizontalOptions="Center"/>
+            <Button ImageSource="Play" Clicked="Run" HorizontalOptions="Center"/>
+        </FlexLayout>
+    </NavigationPage.TitleView>
+    
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="Menu" IconImageSource="Menu1" Priority="2"/>
+        <ToolbarItem Clicked="Run" IconImageSource="Play" Priority="2"/>
+    </ContentPage.ToolbarItems>-->
 
     <ContentPage.Content>
         <StackLayout Margin="10,35,10,10">
+            <Picker x:Name="menu" Title="Select Action" IsEnabled="False">
+
+            </Picker>
+
             <Label Text="Luna"
                    HorizontalOptions="Center"
                    FontAttributes="Bold" />
@@ -43,13 +60,13 @@
                 </Grid.ColumnDefinitions>
 
                 <Button Text="Save"
-                        Clicked="OnSave" />
+                        Clicked="Save" />
                 <Button Grid.Column="1"
                     Text="Load"
-                    Clicked="OnLoad" />
+                    Clicked="Load" />
                 <Button x:Name="run" Grid.Column="2"
                     Text="Run"
-                    Clicked="OnRun"/>
+                    Clicked="Run"/>
             </Grid>
         </StackLayout>
         </ContentPage.Content>

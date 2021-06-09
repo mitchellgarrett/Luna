@@ -3,24 +3,34 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="Luna.MainPage"
-    NavigationPage.HasNavigationBar="False">
+    Title="Luna">
 
     <ContentPage.Content>
+        <TableView Intent="Menu">
+            <TableRoot>
+                <TableSection Title="Program">
+                    <!--<ViewCell Tapped="OnNewFile">
+                        <StackLayout Orientation="Horizontal" Padding="25, 0, 0, 0">
+                            <Image Source="Doc2"/>
+                            <Label Text="New" VerticalTextAlignment="Center"/>
+                        </StackLayout>
+                    </ViewCell>-->
 
-        <StackLayout Margin="10,35,10,10" VerticalOptions="Center">
+                    <ImageCell Text="New" ImageSource="Doc2" Tapped="OnNewFile"/>
+                    <ImageCell Text="Edit" ImageSource="Edit" Tapped="OnEditFile"/>
+                </TableSection>
 
-            <Label Text="Luna"
-               HorizontalOptions="Center"
-               FontAttributes="Bold" />
-            <Image x:Name="image"/>
-            <Button x:Name="newFile"
-                Text="New"
-                    Clicked="OnNewFile"/>
-            <Button Text="Edit" Clicked="OnEditFile"/>
-            <Button Text="Library"/>
-            <Button Text="Settings"/>
-            <Button Text="About"/>
+                <TableSection Title="Reference">
+                    <ImageCell Text="Lua" ImageSource="Book"/>
+                    <ImageCell Text="IO Library" ImageSource="Doc1"/>
+                    <ImageCell Text="System Library" ImageSource="Doc1"/>
+                </TableSection>
 
-        </StackLayout>
+                <TableSection Title="Application">
+                    <ImageCell Text="Settings" ImageSource="Settings"/>
+                    <ImageCell Text="About" ImageSource="Info"/>
+                </TableSection>
+            </TableRoot>
+        </TableView>
     </ContentPage.Content>
 </ContentPage>

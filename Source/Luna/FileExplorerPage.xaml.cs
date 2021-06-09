@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 
 using Xamarin.Forms;
@@ -20,18 +19,25 @@ namespace Luna {
             //File.WriteAllText(Path.Combine(folder, "test.lua"), "print(1)");
             File.Create(Config.GetFilePath("test2.lua"));
 
+            fileList.Root = new TableRoot();
+            
+            TableSection section = new TableSection("Documents");
             string[] filenames = Directory.GetFiles(folder, "*.lua", SearchOption.TopDirectoryOnly);
             for (int i = filenames.Length - 1; i >= 0; --i) {
-                Console.WriteLine(filenames[i]);
-                Button button = new Button();
+                ImageCell cell = new ImageCell();
                 int index = i;
-                button.Clicked += (s, e) => { LoadFile(filenames[index]); };
-                button.Text = Path.GetFileName(filenames[i]);
-                fileList.Children.Add(button);
+                cell.Tapped += (s, e) => { LoadFile(filenames[index]); };
+                cell.Text = Path.GetFileName(filenames[i]);
+                cell.Detail = $"{new FileInfo(filenames[i]).Length} bytes";
+
+
+                section.Add(cell);
             }
+            fileList.Root.Add(section);
         }
 
         void LoadFile(string file) {
+            Console.WriteLine(file);
             Navigation.PushAsync(new CodeEditorPage(file));
         }
     }
