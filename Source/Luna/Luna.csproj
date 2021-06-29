@@ -22,5 +22,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Icons\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Icons\" />
   </ItemGroup>
 </Project>

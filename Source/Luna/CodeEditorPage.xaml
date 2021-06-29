@@ -4,13 +4,13 @@
              x:Class="Luna.CodeEditorPage"
              Title="File">
 
-    <NavigationPage.TitleView>
+    <!--<NavigationPage.TitleView>
         <FlexLayout JustifyContent="SpaceEvenly">
             <Label x:Name="pageTitle" Text="File" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center" MaxLines="1" FontAttributes="Bold"/>
             <Button ImageSource="Menu1" Clicked="Menu" HorizontalOptions="Center"/>
             <Button ImageSource="Play" Clicked="Run" HorizontalOptions="Center"/>
         </FlexLayout>
-    </NavigationPage.TitleView>
+    </NavigationPage.TitleView>-->
     
     <!--<ContentPage.ToolbarItems>
         <ToolbarItem Clicked="Menu" IconImageSource="Menu1" Priority="2"/>
@@ -18,25 +18,14 @@
     </ContentPage.ToolbarItems>-->
 
     <ContentPage.Content>
-        <StackLayout Margin="10,35,10,10">
-            <Picker x:Name="menu" Title="Select Action" IsEnabled="False">
-
-            </Picker>
-
-            <Label Text="Luna"
-                   HorizontalOptions="Center"
-                   FontAttributes="Bold" />
-
-            <Entry x:Name="filename"
-                   Text="file.lua"
-                   Keyboard="Plain"/>
-
+        <StackLayout Margin="10,10,10,10">
             <Frame HasShadow="False" BorderColor="LightGray" CornerRadius="5" Padding="0,0,0,0">
                 <Editor x:Name="editor"
                         Keyboard="Plain"
                         Placeholder="Enter your code"
                         HeightRequest="400"
-                        HorizontalOptions="FillAndExpand"/>
+                        HorizontalOptions="FillAndExpand"
+                        TextChanged="OnEditorTextChanged"/>
             </Frame>
 
             <Frame HasShadow="False" BorderColor="LightGray" CornerRadius="5" Padding="0,0,0,0">

@@ -1,6 +1,4 @@
-﻿using UIKit;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace Luna {
 

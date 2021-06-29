@@ -21,8 +21,8 @@ namespace Luna {
             FILE_PATH = file;
             FILE_NAME = Path.GetFileName(file);
 
-            pageTitle.Text = FILE_NAME;
-            filename.Text = FILE_NAME;
+            Title = FILE_NAME;
+            //pageTitle.Text = FILE_NAME;
             editor.TextChanged += OnEditorTextChanged;
             LoadLibraries();
             Load(null, null);
@@ -39,7 +39,7 @@ namespace Luna {
         }
 
         void Menu(object sender, EventArgs e) {
-            menu.Focus();
+            //menu.Focus();
         }
 
         void Run(object sender, EventArgs e) {
