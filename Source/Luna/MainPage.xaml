@@ -16,8 +16,8 @@
                         </StackLayout>
                     </ViewCell>-->
 
-                    <ImageCell Text="New" ImageSource="Doc2" Tapped="OnNewFile"/>
-                    <ImageCell Text="Edit" ImageSource="Edit" Tapped="OnEditFile"/>
+                    <ImageCell Text="New" ImageSource="Doc2" Tapped="LoadNewPage"/>
+                    <ImageCell Text="Edit" ImageSource="Edit" Tapped="LoadEditPage"/>
                 </TableSection>
 
                 <TableSection Title="Reference">
@@ -28,7 +28,7 @@
 
                 <TableSection Title="Application">
                     <ImageCell Text="Settings" ImageSource="Settings"/>
-                    <ImageCell Text="About" ImageSource="Info"/>
+                    <ImageCell Text="About" ImageSource="Info" Tapped="LoadAboutPage"/>
                 </TableSection>
             </TableRoot>
         </TableView>

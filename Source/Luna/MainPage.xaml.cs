@@ -9,12 +9,16 @@ namespace Luna {
             //image.Source = Xamarin.Forms.ImageSource.FromStream(() => (UIImage.GetSystemImage("file.text")).AsPNG().AsStream());
         }
 
-        void OnNewFile(System.Object sender, System.EventArgs e) {
+        void LoadNewPage(System.Object sender, System.EventArgs e) {
             Navigation.PushAsync(new CodeEditorPage(Config.GetFilePath("untitled.lua")));
         }
 
-        void OnEditFile(System.Object sender, System.EventArgs e) {
+        void LoadEditPage(System.Object sender, System.EventArgs e) {
             Navigation.PushAsync(new FileExplorerPage());
+        }
+
+        void LoadAboutPage(System.Object sender, System.EventArgs e) {
+            Navigation.PushAsync(new AboutPage());
         }
     }
 }

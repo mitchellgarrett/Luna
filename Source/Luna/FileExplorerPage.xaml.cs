@@ -9,15 +9,19 @@ namespace Luna {
 
         public FileExplorerPage() {
             InitializeComponent();
+        }
+
+        protected override void OnAppearing() {
+            base.OnAppearing();
             LoadFiles(Config.RootFolder);
         }
 
         void LoadFiles(string folder) {
             if (!Directory.Exists(folder)) Directory.CreateDirectory(folder);
 
-            File.Create(Config.GetFilePath("test.lua"));
+            //File.Create(Config.GetFilePath("test.lua"));
             //File.WriteAllText(Path.Combine(folder, "test.lua"), "print(1)");
-            File.Create(Config.GetFilePath("test2.lua"));
+            //File.Create(Config.GetFilePath("test2.lua"));
 
             fileList.Root = new TableRoot();
             

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Luna.AboutPage"
+    Title="About">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="AppIcon" HeightRequest="128" />
+            <Label HorizontalTextAlignment="Center" FontFamily="Courier">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span FontFamily="Courier" FontSize="64" Text="Luna"/>
+                            <Span FontSize="Default" x:Name="versionLabel"/>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label FontFamily="Courier" FontSize="Small" HorizontalTextAlignment="Center">Copyright © Garrett Productions 2022</Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
